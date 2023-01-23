@@ -1,0 +1,54 @@
+.navbar {
+  width: $container-width;
+  display: flex;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+  .mobile-nav-toggle {
+    display: none;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5rem;
+    z-index: 1;
+    top: 15px;
+  }
+  nav > ul {
+    display: flex;
+    gap: 3rem;
+    color: white;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    list-style: none;
+  }
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .navbar {
+    position: relative;
+    .mobile-nav-toggle {
+      display: block;
+    }
+    .primary-navigation {
+      display: none;
+      position: absolute;
+      inset: 9rem 0.0005rem auto;
+      ul {
+        flex-direction: column;
+        gap: 5rem;
+        color: black;
+        padding-block: $container-block;
+        background-color: white;
+        text-align: center;
+      }
+    }
+    .primary-navigation[data-visible] {
+      display: block;
+    }
+  }
+}

@@ -1,8 +1,23 @@
-import './style.scss'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
+import "./style.scss";
+import typescriptLogo from "./typescript.svg";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+const primaryNav = document.querySelector<HTMLButtonElement>(
+  ".primary-navigation",
+);
+const navToggle =
+  document.querySelector<HTMLButtonElement>(".mobile-nav-toggle");
+
+navToggle?.addEventListener("click", () => {
+  primaryNav?.hasAttribute("data-visible")
+    ? navToggle.setAttribute("aria-expanded", "true")
+    : navToggle.setAttribute("aria-expanded", "false");
+  primaryNav?.toggleAttribute("data-visible");
+  navToggle?.toggleAttribute("data-visible");
+  console.log(navToggle.getAttribute("aria-expanded"));
+  console.log(navToggle?.hasAttribute("data-visible"));
+});
+
+document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -18,6 +33,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
       Click on the Vite and TypeScript logos to learn more
     </p>
   </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+`;
