@@ -1,0 +1,124 @@
+@use "variables" as *;
+
+@mixin container {
+  margin-block: $container-block;
+  margin-inline: $container-inline;
+  @media screen and (max-width: $xs-breakpoint) {
+    margin-block: $sm-font;
+  }
+}
+
+/* section layout or slo */
+@mixin slo {
+  display: grid;
+  width: $container-width;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "head"
+    "main"
+    "footer";
+}
+
+/* section flexbox sfo */
+@mixin sfo {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: $md-font;
+  width: 100%;
+  margin-block: 15vh;
+  @media screen and (max-width: $sm-breakpoint) {
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+}
+
+/* heading styles */
+@mixin H1 {
+  font-size: $lg-font;
+  color: white;
+  text-transform: capitalize;
+  font-family: $ff;
+  @media screen and (max-width: $sm-breakpoint) {
+    font-size: $md-font;
+    text-align: center;
+  }
+}
+
+/* header for section */
+@mixin section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $container-width;
+  grid-area: head;
+  @media screen and (max-width: $xs-breakpoint) {
+    display: none;
+  }
+}
+
+/* trait image container */
+@mixin trait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: $sm-font + 0.5rem;
+  font-family: $ff;
+  text-transform: uppercase;
+  text-align: center;
+  img {
+    width: 5rem;
+  }
+  @media screen and (max-width: $sm-breakpoint) {
+    img {
+      width: 2rem;
+      display: block;
+    }
+
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+/* section-title for section*/
+@mixin section-title {
+  font-family: $ff;
+  font-size: $lg-font;
+  font-weight: bold;
+  color: transparent;
+  background: $gradient-theme;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  @media screen and (max-width: $sm-breakpoint) {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    text-align: left;
+    text-decoration: underline $main-color 3px;
+
+  }
+}
+
+/* next section */
+@mixin next {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  p {
+    padding: 0;
+    line-height: 50px;
+  }
+  div {
+    text-align: center;
+  }
+}

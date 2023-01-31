@@ -5,11 +5,19 @@
   box-sizing: border-box;
 }
 
-/* Remove margin and padding*/
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/*
+Remove margin and padding
+Hide scroll bars
+*/
 * {
   margin: 0;
   padding: 0;
-  //   background-color: white;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* Remove default margin */
@@ -79,4 +87,5 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
 /* End of reset */

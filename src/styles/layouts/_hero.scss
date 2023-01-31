@@ -1,0 +1,27 @@
+@use "../general/_variables.scss" as *;
+@use "../general/_mixins.scss" as *;
+
+.hero-section {
+  background: $gradient-theme;
+  padding-block: $container-block;
+
+  .cta {
+    width: $container-width;
+    margin-inline: auto;
+    margin-block: 15vh;
+  }
+
+  .cta h1 {
+    @include H1;
+  }
+
+  span {
+    color: $main-color;
+  }
+
+  .next-section-topic {
+    @include next;
+    color: white;
+  }
+
+}

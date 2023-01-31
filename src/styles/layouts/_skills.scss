@@ -1,0 +1,66 @@
+@use "../general/variables" as *;
+@use "../general/mixins" as *;
+
+.skill-section {
+  @include container;
+  @include slo;
+
+  .traits-wrapper {
+    @include container;
+    @include section-header;
+    grid-area: head;
+  }
+
+  .traits-wrapper .trait {
+    @include trait;
+  }
+
+  .section-topic-wrapper {
+    @include sfo;
+  }
+
+  .section-topic-wrapper .section-title {
+    @include section-title;
+  }
+
+  .section-topic-wrapper .skills-section-wrapper {
+    @include container;
+
+    .skills-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    .skills-wrapper .skill_column {
+      font-size: $sm-font + 1;
+      font-family: $ff;
+      text-align: center;
+      text-transform: uppercase;
+      flex: 1 1 5%;
+      padding-block: 2rem;
+      padding-inline: 8vw;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    .skills-wrapper .skill_column > p {
+      color: $main-color;
+      margin-bottom: $sm-font;
+    }
+
+    .skills-wrapper .skill_column .skillset {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+  }
+
+  @media screen and (max-width: $sm-breakpoint) {
+
+  }
+  @media screen and (max-width: $xs-breakpoint) {
+    .traits-wrapper {
+      display: none;
+    }
+  }
+}

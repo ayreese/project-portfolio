@@ -1,9 +1,7 @@
 import "./style.scss";
 import typescriptLogo from "./typescript.svg";
 
-const primaryNav = document.querySelector<HTMLButtonElement>(
-  ".primary-navigation",
-);
+const primaryNav = document.querySelector<HTMLButtonElement>(".prim-nav");
 const navToggle =
   document.querySelector<HTMLButtonElement>(".mobile-nav-toggle");
 
@@ -14,7 +12,7 @@ navToggle?.addEventListener("click", () => {
   primaryNav?.toggleAttribute("data-visible");
   navToggle?.toggleAttribute("data-visible");
   console.log(navToggle.getAttribute("aria-expanded"));
-  console.log(navToggle?.hasAttribute("data-visible"));
+  console.log(navToggle?.hasAttribute("data-visible")); 
 });
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `

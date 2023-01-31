@@ -1,9 +1,14 @@
+@use "../general/variables" as *;
+@use "../general/mixins" as *;
+
+
 .navbar {
   width: $container-width;
   display: flex;
   margin-inline: auto;
   justify-content: space-between;
   align-items: center;
+
   .mobile-nav-toggle {
     display: none;
     cursor: pointer;
@@ -13,7 +18,8 @@
     z-index: 1;
     top: 15px;
   }
-  nav > ul {
+
+  .prim-nav .nav-link-list {
     display: flex;
     gap: 3rem;
     color: white;
@@ -28,26 +34,30 @@
   visibility: hidden;
 }
 
-@media screen and (max-width: $tablet-breakpoint) {
+@media screen and (max-width: $sm-breakpoint) {
   .navbar {
     position: relative;
+
     .mobile-nav-toggle {
       display: block;
     }
-    .primary-navigation {
+
+    .prim-nav {
       display: none;
       position: absolute;
       inset: 9rem 0.0005rem auto;
-      ul {
-        flex-direction: column;
-        gap: 5rem;
-        color: black;
-        padding-block: $container-block;
-        background-color: white;
-        text-align: center;
-      }
     }
-    .primary-navigation[data-visible] {
+
+    .prim-nav .nav-link-list {
+      flex-direction: column;
+      gap: 5rem;
+      color: black;
+      padding-block: $container-block;
+      background-color: white;
+      text-align: center;
+    }
+
+    .prim-nav[data-visible] {
       display: block;
     }
   }

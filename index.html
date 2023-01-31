@@ -1,233 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Portfolio</title>
-  </head>
-  <body>
-    <main>
-      <section class="hero container">
+</head>
+<body>
+<main>
+    <section class="hero-section">
         <header class="nav-wrapper">
-          <div class="navbar">
-            <img src="public/logo.png" alt="" />
-            <button
-              class="mobile-nav-toggle"
-              aria-controls="primary-navigation"
-              aria-expanded="false"
-            >
-              <img
-                class="icon-open"
-                src="public/menu.png"
-                alt=""
-                aria-hidden="true"
-              />
-              <span class="visually-hidden">Menu</span>
-            </button>
-            <nav class="primary-navigation" id="primary-navigation">
-              <ul class="navigation">
-                <li>resume</li>
-                <li>skills</li>
-                <li>projects</li>
-                <li>contact</li>
-              </ul>
-            </nav>
-          </div>
+            <div class="navbar">
+                <img src="public/logo.png" alt="" />
+                <button
+                    class="mobile-nav-toggle"
+                    aria-controls="prim-nav"
+                    aria-expanded="false"
+                >
+                    <img
+                        class="icon-open"
+                        src="public/menu.png"
+                        alt=""
+                        aria-hidden="true"
+                    />
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <nav class="prim-nav" id="prim-nav">
+                    <ul class="nav-link-list">
+                        <li>resume</li>
+                        <li>skills</li>
+                        <li>projects</li>
+                        <li>contact</li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <div class="bio">
-          <h1>
-            My Name Is <span class="my_name">Alex</span>, <br />
-            I’m a Fullstack Developer who’s passionate about solving problems
-            using software
-          </h1>
+        <div class="cta">
+            <h1>
+                My Name Is <span>Alex</span>, <br />
+                I’m a Fullstack Developer who’s passionate about solving problems
+                using software
+            </h1>
         </div>
-        <div class="next_section">
-          <p>next: about me</p>
-          <div class="down_arrow">
-            <img src="public/down.png" alt="" />
-          </div>
-        </div>
-      </section>
-
-      <section class="about container">
-        <div class="highlights">
-          <div class="highlight">
-            <img src="public/calendar.png" alt="" />
-            <p>2 years experience</p>
-          </div>
-          <div class="highlight">
-            <img src="public/code.png" alt="" />
-            <p>50+ projects developed</p>
-          </div>
-          <div class="highlight">
-            <img src="public/pencil.png" alt="" />
-            <p>25+ projects designed</p>
-          </div>
-        </div>
-        <div class="section_info">
-          <p class="title">About Me</p>
-          <img src="public/me.png" alt="" />
-          <div class="details">
-            <p
-              >Lorem ipsum dolor sit amet consectetur. Risus diam integer eget
-              convallis. Malesuada sed iaculis lobortis lobortis aenean
-              sollicitudin hac pellentesque morbi. Interdum.</p
-            >
-            <div class="contact_info">
-              <div class="info_box">
-                <img src="public/location.png" alt="" />
-                <div class="info">
-                  <p>living in</p>
-                  <p>seattle, wa</p>
-                </div>
-              </div>
-              <div class="info_box">
-                <img src="public/phone.png" alt="" />
-                <div class="info">
-                  <p>call me</p>
-                  <p>555-555-5555</p>
-                </div>
-              </div>
-              <div class="info_box">
-                <img src="public/mail.png" alt="" />
-                <div class="info">
-                  <p>email me</p>
-                  <p>ymldnn@gmail.com</p>
-                </div>
-              </div>
+        <div class="next-section-topic">
+            <p>next: about me</p>
+            <div>
+                <img src="public/down.png" alt="" />
             </div>
-          </div>
         </div>
-        <div class="next_section">
-          <p>skills</p>
-        </div>
-      </section>
+    </section>
 
-      <section class="skills container">
-        <div class="highlights">
-          <div class="highlight">
-            <img src="public/ui.png" alt="" />
-            <p>ui/ux design</p>
-          </div>
-          <div class="highlight">
-            <img src="public/laptop.png" alt="" />
-            <p>frontend development</p>
-          </div>
-          <div class="highlight">
-            <img src="public/server.png" alt="" />
-            <p>backend development</p>
-          </div>
-        </div>
-        <div class="section_info">
-          <p class="title">skills</p>
-
-          <div class="details">
-            <div class="contact_info">
-              <div class="skill_column">
-                <p>frontend</p>
-                <div class="skillset">
-                  <p>html</p>
-                  <p>css</p>
-                  <p>sass</p>
-                  <p>javascript</p>
-                  <p>typescript</p>
-                  <p>react</p>
-                  <p>bootstrap</p>
-                </div>
-              </div>
-              <div class="skill_column">
-                <p>tools</p>
-                <div class="skillset">
-                  <p>figma</p>
-                  <p>git</p>
-                  <p>github</p>
-                  <p>docker</p>
-                  <p>linux</p>
-                  <p>aws</p>
-                  <p>jenkins</p>
-                </div>
-              </div>
-              <div class="skill_column">
-                <p>backend</p>
-                <div class="skillset">
-                  <p>nodeJS</p>
-                  <p>express</p>
-                  <p>sql</p>
-                  <p>python</p>
-                </div>
-              </div>
+    <section class="about-section">
+        <div class="traits-wrapper">
+            <div class="trait">
+                <img src="public/calendar.png" alt="" />
+                <p>2 years experience</p>
             </div>
-          </div>
+            <div class="trait">
+                <img src="public/code.png" alt="" />
+                <p>50+ projects developed</p>
+            </div>
+            <div class="trait">
+                <img src="public/pencil.png" alt="" />
+                <p>25+ projects designed</p>
+            </div>
         </div>
-        <div class="next_section">
-          <p>portfolio</p>
-        </div>
-      </section>
+        <div class="section-topic-wrapper">
+            <p class="section-title">About Me</p>
+            <div class="bio-wrapper">
+                <img src="public/me.png" alt="" />
+                <div class="bio">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Risus diam integer eget
+                        convallis. Malesuada sed iaculis lobortis lobortis aenean
+                        sollicitudin hac pellentesque morbi. Interdum.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Risus diam integer eget
+                        convallis. Malesuada sed iaculis lobortis lobortis aenean
+                        sollicitudin hac pellentesque morbi. Interdum.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Risus diam integer eget
+                        convallis. Malesuada sed iaculis lobortis lobortis aenean
+                        sollicitudin hac pellentesque morbi. Interdum.
+                    </p>
+                </div>
 
-      <section class="portfolio container">
-        <div class="highlights">
-          <div class="highlight">
-            <img src="public/ecommerce_.png" alt="" />
-            <p>e-commerce</p>
-          </div>
-          <div class="highlight">
-            <img src="public/game.png" alt="" />
-            <p>game development</p>
-          </div>
-          <div class="highlight">
-            <img src="public/micro.png" alt="" />
-            <p>micro services</p>
-          </div>
+                <div class="contact-info-wrapper">
+                    <div class="contact-element">
+                        <img src="public/location.png" alt="" />
+                        <div class="contact-info">
+                            <p>living in</p>
+                            <p>seattle, wa</p>
+                        </div>
+                    </div>
+                    <div class="contact-element">
+                        <img src="public/phone.png" alt="" />
+                        <div class="contact-info">
+                            <p>call me</p>
+                            <p>555-555-5555</p>
+                        </div>
+                    </div>
+                    <div class="contact-element">
+                        <img src="public/mail.png" alt="" />
+                        <div class="contact-info">
+                            <p>email me</p>
+                            <p>ymldnn@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section_info">
-          <p class="title">skills</p>
+        <div class="next-section-topic">
+            <p>next: skills</p>
+        </div>
+    </section>
 
-          <div class="details">
-            <div class="image_container"
-              ><img src="public/project1.png" alt=""
-            /></div>
-            <div class="image_container"
-              ><img src="public/project1.png" alt=""
-            /></div>
-            <div class="image_container"
-              ><img src="public/project1.png" alt=""
-            /></div>
-            <div class="image_container"
-              ><img src="public/project1.png" alt=""
-            /></div>
-            <div class="image_container"
-              ><img src="public/project1.png" alt=""
-            /></div>
-            <div class="image_container"
-              ><img src="public/project1.png" alt=""
-            /></div>
-          </div>
+    <section class="skill-section">
+        <div class="traits-wrapper">
+            <div class="trait">
+                <img src="public/ui.png" alt="" />
+                <p>ui/ux design</p>
+            </div>
+            <div class="trait">
+                <img src="public/laptop.png" alt="" />
+                <p>frontend development</p>
+            </div>
+            <div class="trait">
+                <img src="public/server.png" alt="" />
+                <p>backend development</p>
+            </div>
         </div>
-        <div class="next_section">
-          <p>nothing</p>
+        <d
+        iv class="section-topic-wrapper">
+            <p class="section-title">skills</p>
+
+            <div class="skills-section-wrapper">
+                <div class="skills-wrapper">
+                    <div class="skill_column">
+                        <p>frontend</p>
+                        <div class="skillset">
+                            <p>html</p>
+                            <p>css</p>
+                            <p>sass</p>
+                            <p>javascript</p>
+                            <p>typescript</p>
+                            <p>react</p>
+                            <p>bootstrap</p>
+                        </div>
+                    </div>
+                    <div class="skill_column">
+                        <p>tools</p>
+                        <div class="skillset">
+                            <p>figma</p>
+                            <p>git</p>
+                            <p>github</p>
+                            <p>docker</p>
+                            <p>linux</p>
+                            <p>aws</p>
+                            <p>jenkins</p>
+                        </div>
+                    </div>
+                    <div class="skill_column">
+                        <p>backend</p>
+                        <div class="skillset">
+                            <p>nodeJS</p>
+                            <p>express</p>
+                            <p>sql</p>
+                            <p>python</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </d
+>
+        <div class="next-section-topic">
+            <p>portfolio</p>
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer_info">
+    </section>
+
+    <section class="portfolio container">
+
+        <div class="traits-wrapper">
+            <div class="trait">
+                <img src="public/ecommerce_.png" alt="" />
+                <p>e-commerce</p>
+            </div>
+            <div class="trait">
+                <img src="public/game.png" alt="" />
+                <p>game development</p>
+            </div>
+            <div class="trait">
+                <img src="public/micro.png" alt="" />
+                <p>micro services</p>
+            </div>
+        </div>
+        <div class="section-topic-wrapper">
+            <p class="section-title">skills</p>
+
+            <div class="bio-wrapper">
+                <div class="image_container"
+                ><img src="public/project1.png" alt=""
+                /></div>
+                <div class="image_container"
+                ><img src="public/project1.png" alt=""
+                /></div>
+                <div class="image_container"
+                ><img src="public/project1.png" alt=""
+                /></div>
+                <div class="image_container"
+                ><img src="public/project1.png" alt=""
+                /></div>
+                <div class="image_container"
+                ><img src="public/project1.png" alt=""
+                /></div>
+                <div class="image_container"
+                ><img src="public/project1.png" alt=""
+                /></div>
+            </div>
+        </div>
+        <div class="next-section-topic">
+            <p>nothing</p>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="footer_info">
         <h1>contact me</h1>
-      </div>
-      <div class="form">
+    </div>
+    <div class="form">
         <form action="">
-          <label for="name">name:</label>
-          <input type="text" id="name" name="name" />
-          <label for="company_name">company:</label>
-          <input type="text" id="company_name" name="company_name" />
-          <label for="email">email:</label>
-          <input type="text" id="email" name="email" />
-          <label for="description">description:</label>
-          <input type="text" id="description" name="description" />
-          <input type="submit" />
+            <label for="name">name:</label>
+            <input type="text" id="name" name="name" />
+            <label for="company_name">company:</label>
+            <input type="text" id="company_name" name="company_name" />
+            <label for="email">email:</label>
+            <input type="text" id="email" name="email" />
+            <label for="description">description:</label>
+            <input type="text" id="description" name="description" />
+            <input type="submit" />
         </form>
-      </div>
-    </footer>
+    </div>
+</footer>
 
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>

@@ -1,59 +1,7 @@
 /* imports */
-@import "reset";
-@import "variables";
-@import "navigation";
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;600;700&display=swap");
+@use "./styles/general" as *;
+@use "styles/components" as *;
+@use "styles/layouts" as *;
 
-/* general styling */
-.container {
-  padding-block: $container-block;
-  margin-inline: auto;
-}
 
-/* hero section */
-.hero {
-  background: $gradient-theme;
-  .bio {
-    width: $container-width;
-    margin-inline: auto;
-    margin-block: 15vh;
-    h1 {
-      font-size: $lg-font;
-      color: white;
-      text-transform: capitalize;
-      font-family: "Lato", sans-serif;
-    }
-  }
-  .my_name {
-    color: $main-color;
-  }
-}
 
-.next_section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  p {
-    padding: 0;
-    line-height: 50px;
-  }
-  div {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: $tablet-breakpoint) {
-  .hero {
-    .bio {
-      h1 {
-        font-size: $md-font;
-        text-align: center;
-      }
-    }
-  }
-}
