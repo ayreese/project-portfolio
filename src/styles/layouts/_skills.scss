@@ -62,15 +62,6 @@
   }
 
   @media screen and (max-width: $sm-breakpoint) {
-    .skill-section {
-      .section-topic-wrapper .skills-section-wrapper {
-        .slider .slider-item {
-          font-size: $sm-font;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: $xs-breakpoint) {
     .section-topic-wrapper .skills-section-wrapper {
       button {
         display: block;
@@ -78,6 +69,8 @@
 
       .slider {
         display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
         list-style: none;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
@@ -89,10 +82,6 @@
         scroll-snap-type: x mandatory;
         flex: 0 0 auto;
 
-      }
-
-      .a11y-slider-status {
-        //        display: block;
       }
 
       .slider .slider-item {
