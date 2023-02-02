@@ -26,41 +26,86 @@
   .section-topic-wrapper .skills-section-wrapper {
     @include container;
 
-    .skills-wrapper {
+    .slider {
       display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 3rem;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
 
-    .skills-wrapper .skill_column {
+    .slider .slider-item {
       font-size: $sm-font + 1;
       font-family: $ff;
       text-align: center;
       text-transform: uppercase;
-      flex: 1 1 5%;
       padding-block: 2rem;
-      padding-inline: 8vw;
+      padding-inline: calc(2rem + 1.5625vw);
       box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      scroll-snap-align: start;
     }
 
-    .skills-wrapper .skill_column > p {
+    .slider .slider-item > p {
+      font-weight: bold;
       color: $main-color;
       margin-bottom: $sm-font;
     }
 
-    .skills-wrapper .skill_column .skillset {
+    .slider .slider-item .skill-list {
       display: flex;
       flex-direction: column;
       gap: .5rem;
+      list-style: none;
     }
   }
 
   @media screen and (max-width: $sm-breakpoint) {
-
-  }
-  @media screen and (max-width: $xs-breakpoint) {
-    .traits-wrapper {
-      display: none;
+    .skill-section {
+      .section-topic-wrapper .skills-section-wrapper {
+        .slider .slider-item {
+          font-size: $sm-font;
+        }
+      }
     }
   }
+  @media screen and (max-width: $xs-breakpoint) {
+    .section-topic-wrapper .skills-section-wrapper {
+      button {
+        display: block;
+      }
+
+      .slider {
+        display: flex;
+        list-style: none;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      .slider > * {
+        scroll-snap-type: x mandatory;
+        flex: 0 0 auto;
+
+      }
+
+      .a11y-slider-status {
+        //        display: block;
+      }
+
+      .slider .slider-item {
+        padding-inline: 0;
+        font-size: $sm-font + .5;
+      }
+
+      .slider > * {
+        width: 100%;
+        flex: 0 0 auto;
+      }
+
+    }
+  }
+  /* end of code */
 }
