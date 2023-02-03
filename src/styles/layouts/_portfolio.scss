@@ -1,1 +1,50 @@
 @use "../general/variables" as *;
+@use "../general/mixins" as *;
+
+.portfolio-section {
+  @include container;
+  @include slo;
+
+  .traits-wrapper {
+    @include container;
+    @include section-header;
+    grid-area: head;
+  }
+
+  .traits-wrapper .trait {
+    @include trait;
+  }
+
+  .section-topic-wrapper {
+    @include sfo;
+
+  }
+
+  .section-topic-wrapper .section-title {
+    @include section-title;
+  }
+
+  .section-topic-wrapper .gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-inline: auto;
+  }
+
+  @media screen and (max-width: $sm-breakpoint) {
+    .section-topic-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .section-topic-wrapper .gallery-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      place-content: center;
+      place-items: center;
+    }
+  }
+
+}

@@ -20,15 +20,10 @@ navToggle?.addEventListener("click", () => {
 /* Slider script */
 new A11YSlider(document.querySelector(".slider"), {
   slidesToShow: 1,
-  arrows: false,
-  dots: false,
-  responsive: {
-    768: {
-      arrows: false
-    },
-    960: {
-      slidesToShow: 3,
-      disable: true // slider disabled 960px to 1279px
-    }
-  }
+  arrows: true,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 2500,
+  autoplayHoverPause: false,
+
 });
