@@ -3,130 +3,131 @@
 
 
 .about-section {
-    @include container;
-    @include slo;
+  @include container;
+  @include slo;
 
-    .traits-wrapper {
-        @include container;
-        @include section-header;
-    }
+  .traits-wrapper {
+    @include container;
+    @include section-header;
+  }
 
   .traits-wrapper .trait {
-        @include trait;
-    }
+    @include trait;
+  }
 
   .section-topic-wrapper {
-        @include sfo;
-        grid-area: main;
-    }
+    @include sfo;
+    grid-area: main;
+  }
 
   .section-topic-wrapper .section-title {
-        @include section-title;
-    }
+    @include section-title;
+  }
 
   .section-topic-wrapper .bio-wrapper {
-        display: grid;
-        grid-auto-rows: min-content;
-        grid-template-areas:
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-template-areas:
     "one two"
     "one three";
 
-        img {
-            grid-area: one;
-        }
+    img {
+      grid-area: one;
+    }
 
     .bio {
-            grid-area: two;
-            place-self: center;
-        }
+      grid-area: two;
+      place-self: center;
+    }
 
     .bio p {
-            margin-bottom: 1rem;
-        }
+      margin-bottom: 1rem;
+    }
 
     .contact-info-wrapper {
-            @include container;
-            grid-area: three;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: $sm-font;
-            place-items: center;
-            width: 100%;
-        }
+      @include container;
+      grid-area: three;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $sm-font;
+      place-items: center;
+      width: 100%;
+    }
 
     .contact-info-wrapper .contact-element {
-            display: flex;
-            align-content: flex-end;
-            gap: 1rem;
-        }
+      display: flex;
+      align-content: flex-end;
+      gap: 1rem;
+    }
 
     .contact-info-wrapper .contact-element .contact-info {
-            font-size: $sm-font - .25rem;
-            text-transform: uppercase;
-            font-family: $ff;
-            a {
-                color: black;
-                text-decoration: nonemo;
-            }
-        }
+      font-size: $sm-font - .25rem;
+      text-transform: uppercase;
+      font-family: $ff;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
 
     .contact-info-wrapper .contact-info p:nth-child(1) {
-            font-weight: bold;
-        }
+      font-weight: bold;
+    }
 
     .contact-info-wrapper .contact-element img {
-            align-self: center;
-            width: $sm-font + 0.5rem;
-        }
+      align-self: center;
+      width: $sm-font + 0.5rem;
     }
+  }
 
   .next-section-topic {
-        @include next;
-        color: black;
-        grid-area: footer;
-    }
+    @include next;
+    color: black;
+    grid-area: footer;
+  }
 
   @media screen and (max-width: $sm-breakpoint) {
 
-        .section-topic-wrapper .bio-wrapper {
-            grid-template-areas:
+    .section-topic-wrapper .bio-wrapper {
+      grid-template-areas:
         "one two"
     "three three";
 
-            .contact-info-wrapper {
-                flex-direction: row;
-                justify-content: space-between;
-            }
+      .contact-info-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+      }
 
       .contact-info-wrapper .contact-element {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-                .contact-info {
-                    text-align: center;
-                }
-            }
+        .contact-info {
+          text-align: center;
         }
+      }
     }
+  }
   @media screen and (max-width: $xs-breakpoint) {
-        .section-topic-wrapper .bio-wrapper {
-            grid-template-areas:
+    .section-topic-wrapper .bio-wrapper {
+      grid-template-areas:
             "two"
             "one"
             "three";
 
-            img {
-                place-self: center;
-            }
+      img {
+        place-self: center;
+      }
 
       .contact-info-wrapper {
-                grid-template-columns: repeat(1, 1fr);
-            }
+        grid-template-columns: repeat(1, 1fr);
+      }
 
       .contact-info-wrapper .contact-element .contact-info {
-                font-size: $sm-font - .25rem;
-            }
-        }
+        font-size: $sm-font - .25rem;
+      }
     }
+  }
 }

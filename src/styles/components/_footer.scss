@@ -1,3 +1,75 @@
 @use "../general/variables" as *;
 @use "../general/mixins" as *;
 
+footer {
+  background: $gradient-theme;
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "description form";
+    gap: 3rem;
+//    width: $container-width;
+    margin-inline: auto;
+    padding-block: 3rem;
+    padding-inline: 3rem;
+
+    .footer-logo {
+      grid-area: logo;
+
+      img {
+        width: 3rem;
+      }
+    }
+
+    .footer-info {
+      grid-area: description;
+      color: white;
+      text-transform: uppercase;
+      font-family: $ff;
+      align-self: center;
+      justify-self: center;
+      font-size: $md-font;
+
+      h2 {
+        font-size: $md-font;
+        line-height: 6rem;
+        font-weight: bold;
+      }
+
+      p {
+        font-weight: lighter;
+        //        width: 50%;
+      }
+    }
+
+    .form {
+      grid-area: form;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-transform: uppercase;
+        font-family: $ff;
+      }
+
+      input[type=text] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        line-height: 2;
+        margin-bottom: 2rem;
+        color: white;
+      }
+    }
+  }
+.footer-bottom {
+      margin-inline: auto;
+      padding-block: 3rem;
+      padding-inline: 3rem;
+      .footer-logo img {
+          width: 4rem;
+      }
+  }
+}
