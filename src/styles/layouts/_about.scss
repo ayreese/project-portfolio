@@ -64,6 +64,10 @@
             font-size: $sm-font - .25rem;
             text-transform: uppercase;
             font-family: $ff;
+            a {
+                color: black;
+                text-decoration: nonemo;
+            }
         }
 
     .contact-info-wrapper .contact-info p:nth-child(1) {

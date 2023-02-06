@@ -96,6 +96,7 @@
   text-transform: uppercase;
   writing-mode: vertical-lr;
   text-orientation: upright;
+  text-align: left;
   @media screen and (max-width: $sm-breakpoint) {
     writing-mode: horizontal-tb;
     text-orientation: upright;
@@ -120,5 +121,14 @@
   }
   div {
     text-align: center;
+  }
+}
+
+@keyframes mouse {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
   }
 }
