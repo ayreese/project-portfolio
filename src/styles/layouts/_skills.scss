@@ -2,104 +2,108 @@
 @use "../general/mixins" as *;
 
 .skill-section {
-  @include container;
-  @include slo;
-
-  .traits-wrapper {
+    background-color: #FAFAFA;
+    
+.section-container {
     @include container;
-    @include section-header;
-    grid-area: head;
-  }
+    @include slo;
+
+    .traits-wrapper {
+        @include container;
+        @include section-header;
+        grid-area: head;
+    }
 
   .traits-wrapper .trait {
-    @include trait;
-  }
+        @include trait;
+    }
 
   .section-topic-wrapper {
-    @include sfo;
-  }
+        @include sfo;
+    }
 
   .section-topic-wrapper .section-title {
-    @include section-title;
-  }
+        @include section-title;
+    }
 
   .section-topic-wrapper .skills-section-wrapper {
-    @include container;
+        @include container;
 
-    .a11y-slider-container .a11y-slider-autoplay, .a11y-slider-status {
-      display: none;
-    }
+        .a11y-slider-container .a11y-slider-autoplay, .a11y-slider-status {
+            display: none;
+        }
 
     .slider {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      list-style: none;
-      -ms-overflow-style: none; /* IE and Edge */
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+            -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
-    }
+        }
 
     .slider .slider-item {
-      font-size: $sm-font + .5;
-      font-family: $ff;
-      text-align: center;
-      text-transform: uppercase;
-      padding-block: 2rem;
-      padding-inline: calc(2rem + 1.5625vw);
-      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    }
+            font-size: $sm-font + .5;
+            font-family: $ff;
+            text-align: center;
+            text-transform: uppercase;
+            padding-block: 2rem;
+            padding-inline: calc(2rem + 1.5625vw);
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
 
     .slider .slider-item > p {
-      font-weight: bold;
-      color: $main-color;
-      margin-bottom: $sm-font;
-    }
+            font-weight: bold;
+            color: $main-color;
+            margin-bottom: $sm-font;
+        }
 
     .slider .slider-item .skill-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      list-style: none;
-    }
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            list-style: none;
+        }
 
-  }
+    }
 
   .next-section-topic {
-    @include next;
-    color: black;
-    grid-area: footer;
-  }
+        @include next;
+        color: black;
+        grid-area: footer;
+    }
 
   @media screen and (max-width: $sm-breakpoint) {
-    .section-topic-wrapper .skills-section-wrapper {
-      button {
-        display: block;
-      }
+        .section-topic-wrapper .skills-section-wrapper {
+            button {
+                display: block;
+            }
 
       .slider {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: unset;
-        list-style: none;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        -ms-overflow-style: none; /* IE and Edge */
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: unset;
+                list-style: none;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
-      }
+            }
 
       .slider > * {
-        scroll-snap-type: x mandatory;
-        flex: 0 0 auto;
-      }
+                scroll-snap-type: x mandatory;
+                flex: 0 0 auto;
+            }
 
       .slider .slider-item {
-        padding-inline: 0;
-        font-size: $sm-font + .5;
-        max-width: 100%;
-        scroll-snap-align: start;
-      }
+                padding-inline: 0;
+                font-size: $sm-font + .5;
+                max-width: 100%;
+                scroll-snap-align: start;
+            }
 
+        }
     }
-  }
   /* end of code */
+}
 }

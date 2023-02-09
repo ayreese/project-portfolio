@@ -1,7 +1,7 @@
 @use "../general/variables" as *;
 @use "../general/mixins" as *;
 
-.portfolio-section {
+.project-section {
   @include container;
   @include slo;
 
@@ -25,9 +25,28 @@
   }
 
   .section-topic-wrapper .gallery-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-inline: auto;
+    //    display: grid;
+    //    grid-template-columns: repeat(3, 1fr);
+    //    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    * {
+//      width: 100%;
+      scroll-snap-type: x mandatory;
+      flex: 0 0 100%;
+    }
+
+    .image-container {
+      img {
+//        width: 50%;
+        object-fit: cover;
+      }
+    }
   }
 
   @media screen and (max-width: $sm-breakpoint) {

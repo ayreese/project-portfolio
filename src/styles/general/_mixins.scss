@@ -65,21 +65,18 @@
   flex-direction: column;
   align-items: center;
   font-weight: bold;
-  font-size: $sm-font + 0.5rem;
+  font-size: $sm-font + 0.25rem;
   font-family: $ff;
   text-transform: uppercase;
   text-align: center;
   img {
-    width: 5rem;
+    width: 3.5rem;
   }
   @media screen and (max-width: $sm-breakpoint) {
+      font-size: $sm-font;
     img {
-      width: 2rem;
+      width: 1.75rem;
       display: block;
-    }
-
-    p {
-      font-size: 1.25rem;
     }
   }
 }

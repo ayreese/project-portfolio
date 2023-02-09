@@ -49,11 +49,11 @@
                 using software
             </p>
 
-<!--            <div class="cta-buttons">     <button>-->
-<!--                <a href="https://drive.google.com/file/d/1wSKrmRxXaVhx_TG7jyx9LGShwobkvJh_/view?usp=share_link">resume</a>-->
-<!--                </button>-->
-<!--                <button><a href="https://github.com/LexTRND">github</a></button>-->
-<!-- </div>-->
+            <!--            <div class="cta-buttons">     <button>-->
+            <!--                <a href="https://drive.google.com/file/d/1wSKrmRxXaVhx_TG7jyx9LGShwobkvJh_/view?usp=share_link">resume</a>-->
+            <!--                </button>-->
+            <!--                <button><a href="https://github.com/LexTRND">github</a></button>-->
+            <!-- </div>-->
         </div>
         <div class="next-section-topic">
             <div>
@@ -73,6 +73,7 @@
     </section>
 
     <section class="about-section" id="about">
+
         <div class="traits-wrapper">
             <div class="trait">
                 <img src="public/calendar.png" alt="" />
@@ -138,64 +139,67 @@
     </section>
 
     <section class="skill-section" id="skill">
-        <div class="traits-wrapper">
-            <div class="trait">
-                <img src="public/laptop.png" alt="" />
-                <h3>frontend development</h3>
+        <div class="section-container">
+            <div class="traits-wrapper">
+                <div class="trait">
+                    <img src="public/laptop.png" alt="" />
+                    <h3>frontend development</h3>
+                </div>
+                <div class="trait">
+                    <img src="public/ui.png" alt="" />
+                    <h3>ui/ux design</h3>
+                </div>
+                <div class="trait">
+                    <img src="public/server.png" alt="" />
+                    <h3>backend development</h3>
+                </div>
             </div>
-            <div class="trait">
-                <img src="public/ui.png" alt="" />
-                <h3>ui/ux design</h3>
-            </div>
-            <div class="trait">
-                <img src="public/server.png" alt="" />
-                <h3>backend development</h3>
+            <div class="section-topic-wrapper">
+                <h2 class="section-title">skills</h2>
+                <div class="skills-section-wrapper">
+                    <ul class="slider">
+                        <li class="slider-item">
+                            <p>frontend</p>
+                            <ul class="skill-list">
+                                <li>html</li>
+                                <li>css</li>
+                                <li>sass</li>
+                                <li>javascript</li>
+                                <li>typescript</li>
+                                <li>react</li>
+                                <li>bootstrap</li>
+                            </ul>
+                        </li>
+                        <li class="slider-item">
+                            <p>tools</p>
+                            <ul class="skill-list">
+                                <li>figma</li>
+                                <li>git</li>
+                                <li>github</li>
+                                <li>docker</li>
+                                <li>linux</li>
+                                <li>aws</li>
+                                <li>jenkins</li>
+                            </ul>
+                        </li>
+                        <li class="slider-item">
+                            <p>backend</p>
+                            <ul class="skill-list">
+                                <li>nodeJS</li>
+                                <li>express</li>
+                                <li>sql</li>
+                                <li>python</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="section-topic-wrapper">
-            <h2 class="section-title">skills</h2>
-            <div class="skills-section-wrapper">
-                <ul class="slider">
-                    <li class="slider-item">
-                        <p>frontend</p>
-                        <ul class="skill-list">
-                            <li>html</li>
-                            <li>css</li>
-                            <li>sass</li>
-                            <li>javascript</li>
-                            <li>typescript</li>
-                            <li>react</li>
-                            <li>bootstrap</li>
-                        </ul>
-                    </li>
-                    <li class="slider-item">
-                        <p>tools</p>
-                        <ul class="skill-list">
-                            <li>figma</li>
-                            <li>git</li>
-                            <li>github</li>
-                            <li>docker</li>
-                            <li>linux</li>
-                            <li>aws</li>
-                            <li>jenkins</li>
-                        </ul>
-                    </li>
-                    <li class="slider-item">
-                        <p>backend</p>
-                        <ul class="skill-list">
-                            <li>nodeJS</li>
-                            <li>express</li>
-                            <li>sql</li>
-                            <li>python</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+
 
     </section>
 
-    <section class="portfolio-section" id="projects">
+    <section class="project-section" id="projects">
 
         <div class="traits-wrapper">
             <div class="trait">
@@ -212,7 +216,7 @@
             </div>
         </div>
         <div class="section-topic-wrapper">
-            <h2 class="section-title">portfolio</h2>
+            <h2 class="section-title">projects</h2>
 
             <div class="gallery-wrapper">
                 <div class="image-container"
@@ -239,32 +243,42 @@
     </section>
 </main>
 <footer>
-<div class="footer-wrapper">
+    <div class="footer-wrapper">
+        <div class="footer-logo">
+            <img src="public/logo.png">
 
-    <div class="footer-info">
-        <h2>contact</h2>
-        <p>I would love to hear about any projects or oppurtunites and how I can help. Please fill in the form, and i'll get back to you as soon as possoble</p>
+        </div>
+
+        <div class="footer-info">
+            <h2>contact</h2>
+            <p>I would love to hear about any projects or oppurtunites and how I can help. Please fill in the form, and
+                i'll get back to you as soon as possoble</p>
+        </div>
+        <div class="form" id="contact">
+            <form action="">
+                <label for="name">name</label>
+                <input type="text" id="name" name="name" />
+                <label for="company_name">company</label>
+                <input type="text" id="company_name" name="company_name" />
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" />
+                <label for="description">description</label>
+                <input type="text" id="description" name="description" />
+                <input type="submit" />
+            </form>
+        </div>
     </div>
-    <div class="form" id="contact">
-        <form action="">
-            <label for="name">name</label>
-            <input type="text" id="name" name="name" />
-            <label for="company_name">company</label>
-            <input type="text" id="company_name" name="company_name" />
-            <label for="email">email</label>
-            <input type="text" id="email" name="email" />
-            <label for="description">description</label>
-            <input type="text" id="description" name="description" />
-            <input type="submit" />
-        </form>
+    <div class="footer-bottom">
+        <div class="copyright">
+            <p>
+                all rights reserved | Designed by Alex
+            </p>
+        </div>
+        <div class="social-media">
+            <img src="public/github.png">
+            <img src="public/linkedin.png">
+        </div>
     </div>
-</div>
-<div class="footer-bottom">
-<div class="footer-logo">
-<img src="public/logo.png">
-</div>
-<div class="social-media"></div>
-</div>
 </footer>
 
 <script type="module" src="/src/main.ts"></script>
