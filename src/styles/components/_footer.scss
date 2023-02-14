@@ -21,7 +21,7 @@ footer {
       grid-area: logo;
 
       img {
-        width: 3rem;
+        width: 2.5rem;
       }
     }
 
@@ -33,6 +33,7 @@ footer {
       align-self: center;
       justify-self: center;
       font-size: $md-font;
+      letter-spacing: .1rem;
 
       h2 {
         font-size: $md-font;

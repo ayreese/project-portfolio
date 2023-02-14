@@ -73,7 +73,7 @@
     width: 3.5rem;
   }
   @media screen and (max-width: $sm-breakpoint) {
-      font-size: $sm-font;
+    font-size: $sm-font;
     img {
       width: 1.75rem;
       display: block;
@@ -94,6 +94,21 @@
   writing-mode: vertical-lr;
   text-orientation: upright;
   text-align: left;
+  //  color: white;
+  //  text-shadow: 1px 1px 1px #919191,
+  //  1px 2px 1px #919191,
+  //  1px 3px 1px #919191,
+  //  1px 4px 1px #919191,
+  //  1px 5px 1px #919191,
+  //  1px 6px 1px #919191,
+  //  1px 7px 1px #919191,
+  //  1px 8px 1px #919191,
+  //  1px 9px 1px #919191,
+  //  1px 10px 1px #919191,
+  //  1px 18px 6px rgb(16, 16, 16, 0.4),
+  //  1px 22px 10px rgb(16, 16, 16, 0.2),
+  //  1px 25px 35px rgb(16, 16, 16, 0.2),
+  //  1px 30px 60px rgb(16, 16, 16, 0.4);
   @media screen and (max-width: $sm-breakpoint) {
     writing-mode: horizontal-tb;
     text-orientation: upright;
@@ -122,10 +137,13 @@
 }
 
 @keyframes mouse {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
+  //  0% {
+  //    transform: translateY(0%);
+  //  }
+  //  40% {
+  //    transform: translateY(40%);
+  //  }
+  //  0% {
+  //    transform: translateY(0%);
+  //  }
 }

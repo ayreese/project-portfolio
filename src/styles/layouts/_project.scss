@@ -1,5 +1,5 @@
-@use "../general/variables" as *;
 @use "../general/mixins" as *;
+@use "../general/variables" as *;
 
 .project-section {
   @include container;
@@ -17,6 +17,40 @@
 
   .section-topic-wrapper {
     @include sfo;
+    position: relative;
+
+    .left-arrow {
+      position: absolute;
+      top: 50%;
+      right: 77%;
+      background: none;
+      border: none;
+
+      img {
+        object-fit: contain;
+        width: 35%;
+      }
+    }
+
+    .right-arrow {
+      position: absolute;
+      top: 50%;
+      left: 90%;
+      background: none;
+      border: none;
+
+      img {
+        width: 35%;
+      }
+    }
+
+  }
+
+  .section-topic-wrapper .a11y-slider-container {
+    display: grid;
+    grid-template-areas:
+    "top"
+    "bottom";
 
   }
 
@@ -35,17 +69,48 @@
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+    width: 75%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
     * {
-//      width: 100%;
+      width: 100%;
       scroll-snap-type: x mandatory;
-      flex: 0 0 100%;
+      flex: 0 0 auto;
     }
 
     .image-container {
       img {
-//        width: 50%;
-        object-fit: cover;
+        //        width: 50%;
       }
+    }
+  }
+
+  .section-topic-wrapper .a11y-slider-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "top" "middle" "bottom";
+    place-items: center;
+
+    .a11y-slider-prev {
+      grid-area: top;
+    }
+
+    .a11y-slider-next {
+      grid-area: top;
+
+    }
+
+    .a11y-slider {
+      grid-area: middle;
+
+    }
+
+    .a11y-slider-status {
+      grid-area: bottom;
+
     }
   }
 

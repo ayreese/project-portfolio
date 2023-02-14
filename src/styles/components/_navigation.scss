@@ -32,8 +32,16 @@
   a {
     text-decoration: none;
     color: white;
+    transition: top 2s linear 1s;
+
+
     &:visited {
       color: inherit;
+    }
+
+    &:hover {
+      text-shadow: 1px 1px 2px white;
+      top: 2rem;
     }
   }
 
@@ -53,9 +61,10 @@
     }
 
     .prim-nav {
-      display: none;
       position: absolute;
-      inset: 9rem 0.0005rem auto;
+      inset: -1000% 0.0005rem auto;
+      transition: top .5s;
+
     }
 
     .prim-nav .nav-link-list {
@@ -65,10 +74,18 @@
       padding-block: $container-block;
       background-color: white;
       text-align: center;
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     }
 
     .prim-nav[data-visible] {
-      display: block;
+      transition: top .5s;
+      top: 9rem;
+    }
+
+
+    a:hover {
+      text-shadow: 1px 1px 2px $main-color;
+      top: 2rem;
     }
   }
 }
