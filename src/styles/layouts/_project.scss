@@ -2,133 +2,133 @@
 @use "../general/variables" as *;
 
 .project-section {
-  @include container;
-  @include slo;
-
-  .traits-wrapper {
-    @include container;
-    @include section-header;
-    grid-area: head;
-  }
-
-  .traits-wrapper .trait {
-    @include trait;
-  }
-
-  .section-topic-wrapper {
-    @include sfo;
-    position: relative;
-
-    .left-arrow {
-      position: absolute;
-      top: 50%;
-      right: 77%;
-      background: none;
-      border: none;
-
-      img {
-        object-fit: contain;
-        width: 35%;
-      }
+  .section-container {
+    margin-block: $container-block;
+    margin-inline: $container-inline;
+    width: $container-width;
+    @media screen and (max-width: $xs-breakpoint) {
+      margin-block: $sm-font;
     }
 
-    .right-arrow {
-      position: absolute;
-      top: 50%;
-      left: 90%;
-      background: none;
-      border: none;
-
-      img {
-        width: 35%;
-      }
+    h2 {
+      @include section-title;
+      writing-mode: horizontal-tb;
+      text-orientation: upright;
+      margin-bottom: 4rem;
     }
 
-  }
-
-  .section-topic-wrapper .a11y-slider-container {
-    display: grid;
-    grid-template-areas:
-    "top"
-    "bottom";
-
-  }
-
-  .section-topic-wrapper .section-title {
-    @include section-title;
-  }
-
-  .section-topic-wrapper .gallery-wrapper {
-    //    display: grid;
-    //    grid-template-columns: repeat(3, 1fr);
-    //    margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-    width: 75%;
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-
-    * {
-      width: 100%;
-      scroll-snap-type: x mandatory;
-      flex: 0 0 auto;
+    h3 {
+      font-family: $ff;
+      color: $main-color;
+      margin-bottom: 1rem;
     }
 
-    .image-container {
-      img {
-        //        width: 50%;
-      }
-    }
-  }
-
-  .section-topic-wrapper .a11y-slider-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "top" "middle" "bottom";
-    place-items: center;
-
-    .a11y-slider-prev {
-      grid-area: top;
-    }
-
-    .a11y-slider-next {
-      grid-area: top;
-
-    }
-
-    .a11y-slider {
-      grid-area: middle;
-
-    }
-
-    .a11y-slider-status {
-      grid-area: bottom;
-
-    }
-  }
-
-  @media screen and (max-width: $sm-breakpoint) {
     .section-topic-wrapper {
+      //   @include sfo;
+      display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      //   position: relative;
     }
-    .section-topic-wrapper .gallery-wrapper {
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+      li {
+        display: flex;
+        // align-items: center;
+        gap: $md-font;
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      p {
+        font-family: $ff;
+        font-size: $sm-font;
+      }
+    }
+
+    .section-topic-wrapper .a11y-slider-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
-      justify-content: center;
-      align-content: center;
-      justify-items: center;
-      place-content: center;
+      grid-template-areas:
+        "top"
+        "bottom";
+    }
+
+    .section-topic-wrapper .section-title {
+      //   @include section-title;
+      text-align: left;
+    }
+
+    .section-topic-wrapper .project-carousel {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: unset;
+      list-style: none;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+      max-width: 100%;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+      .project-carousel > * {
+        scroll-snap-type: x mandatory;
+        flex: 0 0 auto;
+      }
+
+      .project-carousel .image-container {
+        scroll-snap-align: start;
+        max-width: 100%;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .section-topic-wrapper .a11y-slider-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas: "top" "middle" "bottom";
       place-items: center;
+
+      .a11y-slider-prev {
+        grid-area: top;
+      }
+
+      .a11y-slider-next {
+        grid-area: top;
+      }
+
+      .a11y-slider {
+        grid-area: middle;
+      }
+
+      .a11y-slider-status {
+        grid-area: bottom;
+      }
+    }
+
+    @media screen and (max-width: $sm-breakpoint) {
+      .section-topic-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-topic-wrapper .project-carousel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        place-content: center;
+        place-items: center;
+      }
     }
   }
-
 }

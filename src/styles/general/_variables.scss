@@ -9,9 +9,9 @@ $ff: "Lato", sans-serif;
 
 /* font sizes */
 $sm-font: 1rem;
-$md-font: 2rem;
-$lg-font: 3rem;
-$xl-font: 3.5rem;
+$md-font: $sm-font + 1;
+$lg-font: $sm-font + 2;
+$xl-font: $sm-font + 2.5;
 
 /* spacing variables */
 $container-block: 5rem;
@@ -19,8 +19,8 @@ $container-inline: auto;
 
 /* media breakpoints MUI Specification*/
 $xs-breakpoint: 600px;
-$sm-breakpoint: 900px;
-$md-breakpoint: 1200px;
+$sm-breakpoint: $xs-breakpoint + 300;
+$md-breakpoint: $xs-breakpoint + 600;
 
 /* container */
 $container-width: min($md-breakpoint, 100% - $container-block);
