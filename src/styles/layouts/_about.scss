@@ -1,10 +1,10 @@
 @use "../general/variables" as *;
 @use "../general/mixins" as *;
 
-
 .about-section {
   @include container;
   @include slo;
+  font-family: $ff;
 
   .traits-wrapper {
     @include container;
@@ -28,8 +28,8 @@
     display: grid;
     grid-auto-rows: min-content;
     grid-template-areas:
-    "one two"
-    "one three";
+      "one two"
+      "one three";
 
     img {
       grid-area: one;
@@ -61,7 +61,7 @@
     }
 
     .contact-info-wrapper .contact-element .contact-info {
-      font-size: $sm-font - .25rem;
+      font-size: $sm-font - 0.25rem;
       text-transform: uppercase;
       font-family: $ff;
 
@@ -88,11 +88,10 @@
   }
 
   @media screen and (max-width: $sm-breakpoint) {
-
     .section-topic-wrapper .bio-wrapper {
       grid-template-areas:
         "one two"
-    "three three";
+        "three three";
 
       .contact-info-wrapper {
         flex-direction: row;
@@ -113,9 +112,9 @@
   @media screen and (max-width: $xs-breakpoint) {
     .section-topic-wrapper .bio-wrapper {
       grid-template-areas:
-            "two"
-            "one"
-            "three";
+        "two"
+        "one"
+        "three";
 
       img {
         place-self: center;
@@ -126,7 +125,7 @@
       }
 
       .contact-info-wrapper .contact-element .contact-info {
-        font-size: $sm-font - .25rem;
+        font-size: $sm-font - 0.25rem;
       }
     }
   }
