@@ -16,18 +16,26 @@ client
   .then((res) => {
     console.log("res", res.items);
     res.items.forEach((x) => {
-      console.log(x.fields);
       const li = document.createElement("li");
+      const a = document.createElement("a");
       const div = document.createElement("div");
+      const imageWrapper = document.createElement("div");
       const img = document.createElement("img");
       const h3 = document.createElement("h3");
       const p = document.createElement("p");
       img.src = x.fields.image.fields.file.url;
       h3.textContent = x.fields.name;
       p.textContent = x.fields.description;
+      div.className = "description-wrapper";
       div.append(h3, p);
-      li.append(img, div!);
-      li.className = "image-container";
+      a.href = x.fields.url;
+      a.target = "_blank";
+      a.append(img);
+      imageWrapper.append(a);
+      imageWrapper.className = "image-wrapper";
+      li.append(imageWrapper, div!);
+      a.append;
+      li.className = "project-container";
       ul!.append(li!);
     });
   });

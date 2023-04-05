@@ -8,13 +8,13 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "logo ."
-    "description form";
+      "logo ."
+      "description form";
     gap: 3rem;
 
     margin-inline: auto;
     padding-block: 3rem;
-//    padding-inline: 3rem;
+    //    padding-inline: 3rem;
     width: $container-width;
 
     .footer-logo {
@@ -33,7 +33,7 @@ footer {
       align-self: center;
       justify-self: center;
       font-size: $md-font;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
 
       h2 {
         font-size: $md-font;
@@ -53,7 +53,6 @@ footer {
       display: flex;
       width: 100%;
 
-
       form {
         display: flex;
         flex-direction: column;
@@ -65,26 +64,26 @@ footer {
         margin-inline: auto;
       }
 
-      input[type=text] {
+      input[type="text"] {
         background-color: transparent;
         border: none;
         border-bottom: 2px solid white;
-        //        line-height: 0;
-        //        width: 50%;
-//        margin-bottom: 2rem;
         color: white;
+        &:focus {
+          outline: none;
+        }
       }
 
-      input[type=submit] {
+      input[type="submit"] {
         background-color: $main-color;
         border: none;
         color: white;
         padding: 12px 32px;
         text-decoration: none;
-        margin: 4px 2px;
+        margin: 1rem 2px;
         cursor: pointer;
-        //        width: 50%;
-
+        &:placeholder {
+        }
       }
     }
   }
@@ -97,7 +96,6 @@ footer {
     padding-inline: 3rem;
     border-top: 2px solid white;
     width: $container-width;
-
 
     .copyright {
       font-family: $ff;
@@ -121,9 +119,9 @@ footer {
   @media screen and (max-width: $sm-breakpoint) {
     .footer-wrapper {
       grid-template-areas:
-    "logo ."
-    "description description"
-    "form form";
+        "logo ."
+        "description description"
+        "form form";
     }
     .footer-wrapper .footer-info {
       h2 {

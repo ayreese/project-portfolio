@@ -127,6 +127,7 @@
                 <div class="contact-info">
                   <p>available</p>
                   <a
+                    target="_blank"
                     href="https://drive.google.com/file/d/1wSKrmRxXaVhx_TG7jyx9LGShwobkvJh_/view?usp=share_link"
                     >resume</a
                   >
@@ -227,64 +228,9 @@
             </div>
           </div>
           <div class="section-topic-wrapper">
-            <!-- <h2 class="section-title">projects</h2> -->
+            <h2 class="section-title">projects</h2>
 
-            <ul class="projects" id="ul-list">
-              <!-- <li class="image-container"
-                ><img src="public/project2.png" alt="" />
-                <div>
-                  <h3>Audiophile</h3>
-                  <p
-                    >Audiophile is an e-commerce website using Next.js, which
-                    features a shopping cart that utilizes a custom hook to
-                    share context across components. The website includes a
-                    Lambda function that is used to execute orders and AWS S3 to
-                    store images. By using the serverless architecture, the
-                    website is able to handle high levels of traffic without
-                    compromising on speed or reliability. Overall, the website
-                    offers a seamless and user-friendly experience for customers
-                    looking to shop online.</p
-                  >
-                </div></li
-              >
-              <li class="image-container"
-                ><img src="public/project3.png" alt="" />
-                <div>
-                  <h3>Memory Game</h3>
-                  <p
-                    >The Memory Game project is a fun and interactive game that
-                    challenges users to test their memory skills. The game is
-                    built using React functional components and hooks, and
-                    includes clear and well-organized code. The game features a
-                    clean and modern design, with easy-to-read instructions and
-                    clear feedback for the user. The project is well-organized
-                    and follows good coding practices, with clear separation of
-                    concerns into different components. The CSS is also
-                    well-organized, with clear class names that describe the
-                    styles being applied.</p
-                  >
-                </div></li
-              >
-              <li class="image-container"
-                ><img src="public/project2.png" alt="" />
-                <div>
-                  <h3>Project Portfolio</h3>
-                  <p
-                    >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Unde reiciendis nostrum eaque ratione autem in beatae sed
-                    hic, cupiditate reprehenderit rem magnam. Autem a eum
-                    deleniti vitae id illum beatae. Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Unde reiciendis nostrum eaque
-                    ratione autem in beatae sed hic, cupiditate reprehenderit
-                    rem magnam. Autem a eum deleniti vitae id illum beatae.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Unde reiciendis nostrum eaque ratione autem in beatae sed
-                    hic, cupiditate reprehenderit rem magnam. Autem a eum
-                    deleniti vitae id illum beatae.</p
-                  >
-                </div>
-              </li> -->
-            </ul>
+            <ul class="projects" id="ul-list"> </ul>
           </div>
         </div>
       </section>
@@ -304,7 +250,7 @@
           >
         </div>
         <div class="form" id="contact">
-          <form action="">
+          <form action="https://formspree.io/mjvzwrjr" method="POST">
             <label for="name">name</label>
             <input type="text" id="name" name="name" />
             <label for="company_name">company</label>
@@ -313,7 +259,7 @@
             <input type="text" id="email" name="email" />
             <label for="description">description</label>
             <input type="text" id="description" name="description" />
-            <input type="submit" />
+            <input type="submit" value="SUBMIT" />
           </form>
         </div>
       </div>
@@ -322,13 +268,20 @@
           <p> all rights reserved | Designed by Alex </p>
         </div>
         <div class="social-media">
-          <img src="public/github.png" />
-          <img src="public/linkedin.png" />
+          <a href="https://github.com/LexTRND" target="_blank"
+            ><img src="public/github.png"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/alex-reese-ba98b625/"
+            target="_blank"
+            ><img src="public/linkedin.png"
+          /></a>
         </div>
       </div>
     </footer>
 
     <script type="module" src="/src/main.ts"></script>
     <script type="module" src="/src/api.ts"></script>
+    <script type="module" src="/src/form.ts"></script>
   </body>
 </html>
