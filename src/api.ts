@@ -1,5 +1,5 @@
-//  const contentful = require("contentful");
 import { createClient } from "contentful";
+import { ItemFields } from "./types/types";
 
 const client = createClient({
   space: "9f7rsl67dvjh"!,
@@ -10,12 +10,13 @@ const client = createClient({
 const ul = document.getElementById("ul-list");
 
 client
-  .getEntries({
+  .getEntries<ItemFields>({
     content_type: "projects",
   })
   .then((res) => {
-    console.log("res", res.items);
+    console.log("res", res);
     res.items.forEach((x) => {
+      console.log("image", x.fields.image);
       const li = document.createElement("li");
       const a = document.createElement("a");
       const div = document.createElement("div");

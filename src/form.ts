@@ -18,11 +18,13 @@ form!.addEventListener("submit", (e) => {
   })
     .then((response) => {
       // Handle successful form submission
+      console.log(response);
       alert("Thanks for your submission B!");
       clearForm();
     })
     .catch((error) => {
       // Handle form submission error
+      console.log(error);
       alert("Oops! There was a problem submitting your form.");
     });
 });
