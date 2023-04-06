@@ -2,9 +2,9 @@ import { createClient } from "contentful";
 import { ItemFields } from "./types/types";
 
 const client = createClient({
-  space: "9f7rsl67dvjh"!,
+  space: import.meta.env.VITE_API_SPACEID!,
   environment: "master", // defaults to 'master' if not set
-  accessToken: "aF6h-6qMj0poRUFoqg-MwliMOjxodRLYptsjApmrW18"!,
+  accessToken: import.meta.env.VITE_API_TOKEN!,
 });
 
 const ul = document.getElementById("ul-list");
