@@ -2,7 +2,7 @@
 @use "../general/mixins" as *;
 
 .skill-section {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 
   .section-container {
     @include container;
@@ -29,7 +29,8 @@
     .section-topic-wrapper .skills-section-wrapper {
       @include container;
 
-      .a11y-slider-container .a11y-slider-autoplay, .a11y-slider-status {
+      .a11y-slider-container .a11y-slider-autoplay,
+      .a11y-slider-status {
         display: none;
       }
 
@@ -43,7 +44,7 @@
       }
 
       .slider .slider-item {
-        font-size: $sm-font + .5;
+        font-size: $sm-font + 0.5;
         font-family: $ff;
         text-align: center;
         text-transform: uppercase;
@@ -64,7 +65,6 @@
         gap: 1rem;
         list-style: none;
       }
-
     }
 
     .next-section-topic {
@@ -97,11 +97,10 @@
 
         .slider .slider-item {
           padding-inline: 0;
-          font-size: $sm-font + .5;
+          font-size: $sm-font + 0.5;
           max-width: 100%;
           scroll-snap-align: start;
         }
-
       }
     }
     /* end of code */
