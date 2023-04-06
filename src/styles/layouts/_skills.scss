@@ -3,6 +3,7 @@
 
 .skill-section {
   background-color: #fafafa;
+  overflow: hidden;
 
   .section-container {
     @include container;

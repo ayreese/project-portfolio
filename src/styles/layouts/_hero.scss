@@ -14,6 +14,8 @@
   .cta h1 {
     @include H1;
     line-height: 1;
+    margin-bottom: $sm-font;
+    text-align: left !important;
 
     span:nth-of-type(1) {
       color: $main-color;
@@ -31,6 +33,9 @@
     font-size: $md-font;
     font-family: $ff;
     font-weight: lighter;
+    @media screen and (max-width: $sm-breakpoint) {
+      font-size: $sm-font + 0.5;
+    }
   }
 
   .cta .cta-buttons {
@@ -43,9 +48,8 @@
       background-color: $main-color;
       border: none;
       text-transform: uppercase;
-      padding-block: .5rem;
+      padding-block: 0.5rem;
       padding-inline: 4rem;
-
     }
 
     a {
@@ -63,9 +67,7 @@
 
   .next-section-topic .mouse {
     .mouse-scroll-wheel {
-        animation: mouse 1.9s linear infinite;
+      animation: mouse 1.9s linear infinite;
     }
   }
-
-
 }
