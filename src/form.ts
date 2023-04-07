@@ -19,7 +19,7 @@ form!.addEventListener("submit", (e) => {
     .then((response) => {
       // Handle successful form submission
       console.log(response);
-      alert("Thanks for your submission B!");
+      alert("Thanks for your submission! I'll be in touch soon :)");
       clearForm();
     })
     .catch((error) => {
