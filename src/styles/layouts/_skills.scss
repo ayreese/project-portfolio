@@ -74,6 +74,16 @@
       grid-area: footer;
     }
 
+    @media screen and (max-width: 460px) {
+      width: auto !important;
+      .section-title {
+        padding-left: 2rem;
+      }
+      .slider {
+        margin-left: -1rem !important;
+      }
+    }
+
     @media screen and (max-width: $sm-breakpoint) {
       .section-topic-wrapper .skills-section-wrapper {
         button {
