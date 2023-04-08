@@ -9,6 +9,9 @@
     width: $container-width;
     margin-inline: auto;
     margin-block: 15vh;
+    p:nth-of-type(1) {
+      margin-bottom: 1rem;
+    }
   }
 
   .cta h1 {
