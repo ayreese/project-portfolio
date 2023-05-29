@@ -29,6 +29,9 @@
       line-height: 0;
       font-size: 1rem;
     }
+    @media screen and (max-width: 320px) {
+      text-align: center !important;
+    }
   }
 
   .cta p {
@@ -36,8 +39,9 @@
     font-size: $md-font;
     font-family: $ff;
     font-weight: lighter;
-    @media screen and (max-width: $sm-breakpoint) {
+    @media screen and (max-width: 320px) {
       font-size: $sm-font + 0.5;
+      text-align: center;
     }
   }
 
